@@ -1,0 +1,1 @@
+const naverService = require("../src/services/naverService");
