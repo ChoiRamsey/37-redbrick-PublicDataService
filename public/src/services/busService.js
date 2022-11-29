@@ -22,9 +22,9 @@ const getBusStops = async(keyword) => {
 const getPassengersByLine = async(busNum) => {
   const today = new Date();
   const thisYear = today.getFullYear();
-  const thisMonth = '0' + today.getMonth();
-  const yyyymm = String(thisYear + thisMonth);
-
+  const thisMonth = '0' + (today.getMonth() - 1);
+  const yyyymm = String(thisYear) + String(thisMonth);
+  
   let howManyPassenger = await fetch(
     `http://openapi.seoul.go.kr:8088/${process.env.SEOUL_KEY}/json/CardBusTimeNew/1/5/${yyyymm}/${busNum}`,
     {

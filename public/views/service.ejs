@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>공공데이터 조회 서비스</title>
+  <style>
+    @charset "UTF-8";
+    * {
+      margin: 0px;
+      padding: 0px;
+      box-sizing: border-box;
+    }
+    h1 {
+      text-align: center;
+      margin: 50px;
+    }
+    .container {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      grid-template-areas: 
+        "h1 h2 h3 h4 h5"
+        "a1 b1 c1 d1 e1"
+        ".. b2 c2 d2 ..";
+      justify-items: center;
+      justify-content: space-evenly;
+    }
+    .header {
+      border: none;
+    }
+    .item {
+      margin: 20px;
+      width: 400px;
+      height: 100px;
+      text-align: center;
+      line-height: 100px;
+      font-size: 20px;
+      font-weight: bold;
+      background-color: lightgrey;
+    }
+    .h1 { grid-area: h1; }
+    .h2 { grid-area: h2; }
+    .h3 { grid-area: h3; }
+    .h4 { grid-area: h4; }
+    .h5 { grid-area: h5; }
+    .news { grid-area: a1; }
+    .subway1 { grid-area: b1; }
+    .subway2 { grid-area: b2; }
+    .bus1 { grid-area: c1; }
+    .bus2 { grid-area: c2; }
+    .weather1 { grid-area: d1; }
+    .weather2 { grid-area: d2; }
+    .dust { grid-area: e1; }
+    input {
+      border: none;
+      background-color: transparent;
+      font-size: 20px;
+      font-weight: bold;
+      width: 400px;
+      height: 100px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1>공공데이터 조회 서비스</h1>
+  <div class="container">
+    <div class="header h1"><h2>NEWS</h2></div>
+    <div class="header h2"><h2>SUBWAY</h2></div>
+    <div class="header h3"><h2>BUS</h2></div>
+    <div class="header h4"><h2>WEATHER</h2></div>
+    <div class="header h5"><h2>FINE DUST</h2></div>
+    <div class="item news"><input type="button" onclick="location.href='http://127.0.0.1:3000/news';" value="코로나, 메타버스 관련 뉴스 빅데이터 조회" /></div>
+    <div class="item subway1"><input type="button" onclick="location.href='http://127.0.0.1:3000/';" value="지하철 역별 도착 정보 조회" /></div>
+    <div class="item subway2"><input type="button" onclick="location.href='http://127.0.0.1:3000/';" value="지하철 2호선 일일 시간별 통행 인원 정보 조회" /></div>
+    <div class="item bus1"><input type="button" onclick="location.href='http://127.0.0.1:3000/bus/강남역';" value="버스정류장 정보 조회" /></div>
+    <div class="item bus2"><input type="button" onclick="location.href='http://127.0.0.1:3000/bus/passenger?busNum=0017';" value="버스별 출근시간 승객 수 조회" /></div>
+    <div class="item weather1"><input type="button" onclick="location.href='http://127.0.0.1:3000/';" value="초단기 실황 조회" /></div>
+    <div class="item weather2"><input type="button" onclick="location.href='http://127.0.0.1:3000/';" value="공항 이륙예보 조회" /></div>
+    <div class="item dust"><input type="button" onclick="location.href='http://127.0.0.1:3000/dust?SERVICE=yearMicroDustInfo';" value="연도별 초미세먼지 발령 정보 조회" /></div>
+  </div>
+  <!-- <script>
+    const arr = ()=>{
+      const asd = "aslkdalkdmlnkandl.aksjdnkajsndkasbdjb.1eajsnlnlad"
+      localStorage.setItem("TOKEN",  asd)
+    }
+    arr()
+  </script> -->
+</body>
+</html>

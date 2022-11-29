@@ -2,6 +2,13 @@ const { dustService } = require("../services");
 const { catchAsync } = require("../utils/error");
 
 const getApi = (req, res) => {
+  
+  // const { id, platform } = req;
+  // console.log(id, platform);
+  // if (!id || !platform) {
+  //   throw new Error("id KEY_ERROR");
+  // }
+
   let data;
   const { SERVICE } = req.query;
   data = SERVICE;
