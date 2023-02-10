@@ -3,13 +3,13 @@ const { catchAsync } = require('../utils/error');
 
 const getBusStops = catchAsync(async(req, res) => {
   const { keyword } = req.params;
-  const platformNum = req.platform;
+  // const platformNum = req.platform;
 
-  if ( platformNum !== 1 ) {
-    const error = new Error('PLEASE_LOGIN_WITH_NAVER');
-    error.statusCode = 400;
-    throw error;
-  }
+  // if ( platformNum !== 1 ) {
+  //   const error = new Error('PLEASE_LOGIN_WITH_NAVER');
+  //   error.statusCode = 400;
+  //   throw error;
+  // }
   
   const result = await busService.getBusStops(keyword);
   
