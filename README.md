@@ -1,6 +1,6 @@
 # 공공 데이터 제공 서비스
 
-![main](./img/loginmenu.png)
+![main](./public/img/loginmenu.png)
 
 ## 📖 DESCRIPTION
 
@@ -13,7 +13,7 @@
 - 개발 기간: 2022.10.18 ~ 2022.11.04
 - 개발 인원: 5명(BE 5명)
 - API Documentation
-  ![main](./img/main.png)
+  ![main](./public/img/main.png)
 
 ### FOLDER STRUCTURE
 
