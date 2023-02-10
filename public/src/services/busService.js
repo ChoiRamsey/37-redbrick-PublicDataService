@@ -20,7 +20,7 @@ const getBusStops = async(keyword) => {
 };
 
 const getPassengersByLine = async(busNum) => {
-  const today = new Date();
+  const today = new Date('2022-09-30');
   const thisYear = today.getFullYear();
   const thisMonth = '0' + (today.getMonth() - 1);
   const yyyymm = String(thisYear) + String(thisMonth);
